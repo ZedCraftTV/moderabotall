@@ -62,6 +62,17 @@ client.login("NDM5NzYwOTIxMDA3NDg5MDI0.DdM0Iw.71ZuUfoWPN9ufJyIsF3357dhzQc");
             }
           }
         });
+
+		if message.content === prefix + "hhelp"){
+				var embed = new Discord.RichEmbed()
+					.setTitle("AIDE")
+					.setDescription("Liste des commandes disponibles")
+					.addField(".help","page d'aide",true)
+					.addField("Test","test 1 1 1 1 1:D c un test [lien du modera ahbibi](https://moderabot.jimdosite.com/)", true)
+				.setColor("0x0000ff")
+				.setFooter("je bz ta mere pd")
+				message.channel.sendEmbed(embed);
+			}
         
 
         // Commande 8ball
@@ -142,15 +153,6 @@ client.on('message', message => {
               }
             });
 			
-			if message.content === prefix + "hhelp"){
-				var embed = new Discord.RichEmbed()
-					.setTitle("AIDE")
-					.setDescription("Liste des commandes disponibles")
-					.addField(".help","page d'aide",true)
-					.addField("Test","test 1 1 1 1 1:D c un test [lien du modera ahbibi](https://moderabot.jimdosite.com/)", true)
-				.setColor("0x0000ff")
-				.setFooter("je bz ta mere pd")
-				message.channel.sendEmbed(embed);
-			}
-			 });
+	
+		
       
