@@ -11,7 +11,7 @@ client.on('ready', () => {
   console.log(`EF BOT ON`);
 });
 
-client.login("NDM5NzYwOTIxMDA3NDg5MDI0.DgFnHw.2Ydn7BAXQmbadNeDPeYoAzih2cM");
+client.login(process.env.TOKEN);
 
         // Commande de Kick
         client.on('message', message => {
