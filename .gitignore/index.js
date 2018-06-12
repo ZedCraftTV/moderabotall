@@ -105,7 +105,7 @@ client.on('message', message => {
            // Help
 client.on('message', message => {
   var args = message.content.split(" ").slice(1)
-  if(message.content.startsWith(prefix + ("cmd"))) {
+  if(message.content.startsWith(prefix + ("jtebz"))) {
     let ballembed = new Discord.RichEmbed()
     .setTitle("EF ALL")
     .setDescription("ONT VAS BZ DES MERES BANDES DE SALOPES.")
